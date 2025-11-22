@@ -26,7 +26,7 @@ fun RegisterScreen(
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
-                title = { Text("Crear la cuenta") }
+                title = { Text("Crear cuenta") }
             )
         }
     ) { paddingValues ->

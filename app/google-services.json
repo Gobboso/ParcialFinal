@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "481692675174",
+    "project_id": "mi-primer-proyectog",
+    "storage_bucket": "mi-primer-proyectog.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481692675174:android:ae905942bf5c5a09c4d1a7",
+        "android_client_info": {
+          "package_name": "com.example.actividadsemana12"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTuky2Zl1iraX_MuI1ejWkHuf9OGIXDq4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481692675174:android:2b14d247906ad68fc4d1a7",
+        "android_client_info": {
+          "package_name": "com.example.parcialfinal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTuky2Zl1iraX_MuI1ejWkHuf9OGIXDq4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -20,6 +20,9 @@ fun RegisterScreen(
     var confirmPassword by remember { mutableStateOf("") }
     var message by remember { mutableStateOf<String?>(null) }
 
+    // Para mostrar el diálogo de éxito
+    var showSuccessDialog by remember { mutableStateOf(false) }
+
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
@@ -71,8 +74,7 @@ fun RegisterScreen(
 
                     auth.createUserWithEmailAndPassword(email.trim(), password)
                         .addOnSuccessListener {
-                            message = "Cuenta creada correctamente"
-                            onRegisterSuccess()
+                            showSuccessDialog = true  // activa el dialog
                         }
                         .addOnFailureListener {
                             message = it.localizedMessage
@@ -101,5 +103,31 @@ fun RegisterScreen(
                 )
             }
         }
+    }
+
+    // ================================
+    //       D I Á L O G O   M3
+    // ================================
+    if (showSuccessDialog) {
+        AlertDialog(
+            onDismissRequest = { /* no permitir cerrar tocando afuera */ },
+
+            title = {
+                Text(text = "Cuenta creada")
+            },
+
+            text = {
+                Text("Tu cuenta se creó correctamente.")
+            },
+
+            confirmButton = {
+                TextButton(onClick = {
+                    showSuccessDialog = false
+                    onRegisterSuccess()   // volver al login
+                }) {
+                    Text("Aceptar")
+                }
+            }
+        )
     }
 }
